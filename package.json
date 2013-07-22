@@ -1,11 +1,11 @@
 {
-  "name": "node-example",
+  "name": "chopchopchopper",
   "version": "0.0.1",
   "dependencies": {
-    "express": "2.5.x"
+    "express": "3.2.6"
   },
   "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
+    "node": "0.10.11",
+    "npm": "1.2.25"
   }
 }
