@@ -187,20 +187,21 @@
           <img class="polaroid" src="http://placehold.it/480x300">
         </div>
 
+        <h3 class="span12" style="text-align: center">Random test statistics</h3>
         <div class="span8 offset2 statistics">
           <div class="span4">
             <div class="linediv-l">
-              <h3>1000</h3> <p>backers</p>
+              <h3 id="backers">1000</h3> <p>backers</p>
             </div>
           </div>
           <div class="span4">
             <div class="linediv-c">
-              <h3>$6,000</h3> <p>of $10,000</p>
+              <h3 id="raised">$6,000</h3> <p>of $10,000</p>
             </div>
           </div>
           <div class="span4">
             <div class="linediv-r">
-              <h3>10</h3> <p>days left</p>
+              <h3 id="timeleft">10</h3> <p>days left</p>
             </div>
           </div>
         </div>
@@ -208,8 +209,8 @@
         <!-- Thermometer/progress bar (should be hooked up with JS. -->
         <div class="span10 offset1">
           <div class="thermometer progress active">
-            <div class="bar bar-success" style="width: 60%;"></div>
-            <div class="bar bar-warning" style="width: 40%;"></div>
+            <div class="bar bar-success" style="width: 0%;"></div>
+            <div class="bar bar-warning" style="width: 100%;"></div>
           </div>
         </div>
         
@@ -288,6 +289,7 @@
               </div>
             </div>
 
+          </div>
         </div>
       </div>
 
@@ -313,5 +315,30 @@
         </div>
       </div>
     </div>
+
+    <script>
+      $(function() {
+        var thermsuccess = $('.thermometer .bar-success');
+        var thermleft = $('.thermometer .bar-warning');
+        
+        var backers = $('#backers');
+        var raised = $('#raised');
+        var timeleft = $('#timeleft');
+        
+        fans = Math.floor(Math.random() * 10000);
+        dollars = Math.round(fans * Math.random() * 5);
+        backers.text(fans);
+        raised.text('$' + dollars.toLocaleString());
+        ratio = dollars / 10000;
+        if (ratio < 1) {
+          console.log(Math.round(ratio * 100))
+          thermsuccess.css({width: Math.round(ratio * 100) + '%'});
+          thermleft.css({width: Math.round((1.0 - ratio) * 100) + '%'});
+        } else {
+          thermsuccess.css({width: '100%'});
+          thermleft.css({width: '0'});
+        }
+      });
+    </script>
   </body>
 </html>
