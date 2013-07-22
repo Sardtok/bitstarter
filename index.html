@@ -2,15 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>My First Bitstarter</title>
+    <title>Chop Chop Chopper</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet"
+      href="css/social-buttons.css">
+<!--
     <link type="text/css" rel="stylesheet"
-          href="css/bootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet"
-          href="css/font-awesome.css">
+       href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
     <link type="text/css" rel="stylesheet"
-          href="css/social-buttons.css">
+          href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+-->
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -18,13 +25,13 @@
     <link type="text/css" rel="stylesheet"
           href="css/Open+Sans300,400,600,700,800,300italic,400italic,600italic,700italic.css">
     <link type="text/css" rel="stylesheet"
-          href="css/Ubuntu300,400,500,700,300italic,400italic,500italic,700italic.css">
+          href="http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic">
 
     <style type="text/css">
       /* BIG SCREENS */
       @media (min-width: 980px) {
         body {
-          padding-top: 60px;
+          padding-top: 5em;
         }
         .linediv-l {
           border-right: 1px white solid;
@@ -37,7 +44,7 @@
       /* small screens */
       @media (max-width: 480px) {
         .copy {
-          padding: 2.5% 10%;
+          padding: 2em 5em;
         }
         .linediv-l {
           border-bottom: 1px white solid;
@@ -51,23 +58,47 @@
 
       /* Body and headings. */
       body {
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-family: 'Libre Baskerville', serif;
       }
       .container {
         width: 960px;
+        font-size: 14pt;
+        line-height: 175%;
+      }
+      h1, h2, h3, h4, h5, h6, .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        font-size: 300%;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 275%;
+        font-weight: bold;
+      }
+      h3 {
+        font-size: 250%;
+        font-weight: bold;
+      }
+      h4 {
+        font-size: 250%;
+        font-style: italic;
+      }
+      h5 {
+        font-size: 200%;
+        font-weight: bold;
+      }
+      h6 {
+        font-size: 200%;
+      font-style: italic;
       }
       .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
         text-align: center;
       }
       p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
+        padding-top: 1em;
+        font-size: 150%;
+        line-height: 150%;
       }
 
       /* Video, pitch and Action */
@@ -84,6 +115,9 @@
       .video, .thermometer, .order, .social, .statistics {
         text-align: center;
       }
+      .statistics {
+        background-color: #bbc;
+      }
       .statistics h3, .statistics p {
         color: white;
       }
@@ -97,14 +131,14 @@
         padding: 2.5% 0%;
       }
       .footer {
-        color: #cccccc;
+        color: #bbc;
         text-align: center;
       }
       .footer p {
-        font-size: 11px;
+        font-size: 0.75em;
       }
       .footer a {
-        color: #ccccff;
+      color: #88f;
       }
     </style>
   </head>
@@ -120,7 +154,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#">Bitstarter</a>
+        <a class="brand" href="#">Chop Chop Chopper</a>
 
         <div class="nav-collapse collapse">
           <ul class="nav">
@@ -138,12 +172,12 @@
       <!-- Title section -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Bitstarter Title</h1>
+          <h1>Chop Chop Chopper</h1>
         </div>
       </div>
       <div class="row-fluid subheading">
         <div class="span12">
-          <p class="lead">This is my first bitstarter project.</p>
+          <p class="lead">A helicopter shoot-em-up video game.</p>
         </div>
       </div>
 
@@ -153,22 +187,20 @@
           <img class="polaroid" src="http://placehold.it/480x300">
         </div>
 
-        <div class="span8 offset2">
-          <div class="statistics">
-            <div class="span4">
-              <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
-              </div>
+        <div class="span8 offset2 statistics">
+          <div class="span4">
+            <div class="linediv-l">
+              <h3>1000</h3> <p>backers</p>
             </div>
-            <div class="span4">
-              <div class="linediv-c">
-                <h3>$6,000</h3> <p>of $10,000</p>
-              </div>
+          </div>
+          <div class="span4">
+            <div class="linediv-c">
+              <h3>$6,000</h3> <p>of $10,000</p>
             </div>
-            <div class="span4">
-              <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
-              </div>
+          </div>
+          <div class="span4">
+            <div class="linediv-r">
+              <h3>10</h3> <p>days left</p>
             </div>
           </div>
         </div>
@@ -273,13 +305,22 @@
       <!-- http://creativecommons.org/licenses -->
       <div class="row-fluid footer">
         <div class="span12">
-          <p>This work is licensed under the
-            <a href="http://creativecommons.org/license/by-sa/3.0/">
-            CC By-SA 3.0
+          <p>
+            Chop Chop Chopper is a game by Chickensoft
+            Entertainment. Screenshots and videos of the game and
+            material fromthe game is licensed under the
+            <a href="http://creativecommons.org/licenses/by-nc/3.0/">
+            CC BY-NC 3.0
+            </a>.
+            Fluffy the Chicken is a trademark of Chickensoft Entertainment.
+          </p>
+          <p>Website design is licensed under the
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+            CC BY-SA 3.0
             </a>
-            Originally authored by Balaji S. Srinivasan and/or Vijay
-            S. Pande, or someone else related to Stanford's Startup
-            Engineering class on Coursera.
+            Original design by Balaji S. Srinivasan and Vijay
+            S. Pande.
+          </p>
         </div>
       </div>
     </div>
